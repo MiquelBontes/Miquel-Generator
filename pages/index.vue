@@ -2,7 +2,9 @@
     <div class="w-full flex justify-center">
         <div class="justify-center py-5 w-full lg:w-1/2 md:w-3/4 md:block">
             <div class="pb-2">
-                <h1 class="text-center text-white text-6xl font-semibold">Miquel-Generator</h1>
+                <h1 class="text-center text-white text-6xl font-semibold">
+                    Miquel-Generator
+                </h1>
             </div>
 
             <div class="mt-20 flex flex-col text-center space-y-4">
@@ -14,15 +16,6 @@
                         Miquel's namen
                     </nuxt-link>
                 </div>
-
-                <!--        <div>-->
-                <!--          <nuxt-link-->
-                <!--              class="menu-item"-->
-                <!--              to="/nick-names"-->
-                <!--          >-->
-                <!--              Nick's namen-->
-                <!--          </nuxt-link>-->
-                <!--        </div>-->
             </div>
         </div>
     </div>
