@@ -1,27 +1,23 @@
 <template>
     <div class="flex h-full justify-center items-center">
-        <button
-            @click=""
-            class="sentence-text"
-        >
-            Dit is een test
-        </button>
+        <sentence-generator :sentences="sentences"/>
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import SentenceGenerator from '~/components/SentenceGenerator.vue';
+import { ISentence } from '~/core/interfaces/Sentence';
+import { MiquelSentences } from '~/core/exports/sentences/MiquelSentences';
 
-@Component
+@Component({
+    components: {SentenceGenerator}
+})
 export default class MiquelSentenceIndex extends Vue {
-
+    sentences: ISentence = MiquelSentences
 }
 </script>
 
 <style scoped>
-.sentence-text {
-    @apply
-    text-6xl text-gray-200 hover:text-white
-    cursor-pointer
-}
+
 </style>
