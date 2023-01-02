@@ -15,7 +15,7 @@ import IName from '~/core/interfaces/Name';
 
 @Component
 export default class NameGenerator extends Vue {
-    @Prop({type: IName, required: true})
+    @Prop({required: true})
     readonly nameParts!: IName
 
     fullName: string = ''

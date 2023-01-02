@@ -1,8 +1,6 @@
 <template>
-    <div class="h-screen">
-        <div class="flex h-full justify-center items-center">
-            <name-generator :name-parts="nameParts"/>
-        </div>
+    <div class="flex h-full justify-center items-center">
+        <name-generator :name-parts="nameParts"/>
     </div>
 </template>
 
