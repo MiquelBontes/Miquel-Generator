@@ -5,7 +5,7 @@ interface INameParts {
 }
 
 export default interface IName {
-    firstName: INameParts
-    lastName: INameParts
+    firstNames: INameParts
+    lastNames: INameParts
     prepositions?: string[]
 }

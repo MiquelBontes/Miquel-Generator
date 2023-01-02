@@ -4,7 +4,7 @@ export const MiquelSentences: ISentence = {
     startVerbs: [
         'bent',
         'klinkt',
-        'spreekt',
+        'praat',
         'loopt',
         'codeert',
         'typt',
@@ -13,6 +13,7 @@ export const MiquelSentences: ISentence = {
         'spuugt',
         'zingt',
         'schaatst',
+        'vecht',
         'sport',
         'schreeuwt',
         'zeikt',

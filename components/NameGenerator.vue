@@ -43,23 +43,23 @@ export default class NameGenerator extends Vue {
     generateFirstName(): string {
         const randomValue = Math.floor(Math.random() * 4)
 
-        if (randomValue === 0 && this.nameParts.firstName.single) {
-            return this.nameParts.firstName.single[Math.floor(Math.random() * this.nameParts.firstName.single.length)]
+        if (randomValue === 0 && this.nameParts.firstNames.single) {
+            return this.nameParts.firstNames.single[Math.floor(Math.random() * this.nameParts.firstNames.single.length)]
         }
 
-        return this.nameParts.firstName.firstHalf[Math.floor(Math.random() * this.nameParts.firstName.firstHalf.length)] +
-            this.nameParts.firstName.secondHalf[Math.floor(Math.random() * this.nameParts.firstName.secondHalf.length)]
+        return this.nameParts.firstNames.firstHalf[Math.floor(Math.random() * this.nameParts.firstNames.firstHalf.length)] +
+            this.nameParts.firstNames.secondHalf[Math.floor(Math.random() * this.nameParts.firstNames.secondHalf.length)]
     }
 
     generateLastName(): string {
         const randomValue = Math.floor(Math.random() * 4)
 
-        if (randomValue === 0 && this.nameParts.lastName.single) {
-            return this.nameParts.lastName.single[Math.floor(Math.random() * this.nameParts.lastName.single.length)]
+        if (randomValue === 0 && this.nameParts.lastNames.single) {
+            return this.nameParts.lastNames.single[Math.floor(Math.random() * this.nameParts.lastNames.single.length)]
         }
 
-        return this.nameParts.lastName.firstHalf[Math.floor(Math.random() * this.nameParts.lastName.firstHalf.length)] +
-            this.nameParts.lastName.secondHalf[Math.floor(Math.random() * this.nameParts.lastName.secondHalf.length)]
+        return this.nameParts.lastNames.firstHalf[Math.floor(Math.random() * this.nameParts.lastNames.firstHalf.length)] +
+            this.nameParts.lastNames.secondHalf[Math.floor(Math.random() * this.nameParts.lastNames.secondHalf.length)]
     }
 }
 </script>
