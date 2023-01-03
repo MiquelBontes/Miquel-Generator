@@ -100,6 +100,8 @@ export const MiquelSentences: ISentence = {
         'stagiair',
         'makreel',
         'vos',
-        ''
+        'geit',
+        'developer',
+        'gamer',
     ],
 }
