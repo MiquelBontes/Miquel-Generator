@@ -17,7 +17,3 @@ export default class MiquelSentenceIndex extends Vue {
     sentences: ISentence = MiquelSentences
 }
 </script>
-
-<style scoped>
-
-</style>

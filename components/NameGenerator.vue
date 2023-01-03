@@ -16,7 +16,7 @@ import IName from '~/core/interfaces/Name';
 @Component
 export default class NameGenerator extends Vue {
     @Prop({required: true})
-    readonly nameParts!: IName
+    readonly names!: IName
 
     fullName: string = ''
 
@@ -25,14 +25,12 @@ export default class NameGenerator extends Vue {
     }
 
     generateFullName(): void {
-        this.fullName = ''
-
-        this.fullName += this.generateFirstName()
+        this.fullName = this.generateFirstName()
 
         this.fullName += ' '
 
-        if (this.nameParts.prepositions) {
-            this.fullName += this.nameParts.prepositions[Math.floor(Math.random() * this.nameParts.prepositions.length)]
+        if (this.names.prepositions) {
+            this.fullName += this.names.prepositions[Math.floor(Math.random() * this.names.prepositions.length)]
 
             this.fullName += ' '
         }
@@ -43,23 +41,23 @@ export default class NameGenerator extends Vue {
     generateFirstName(): string {
         const randomValue = Math.floor(Math.random() * 4)
 
-        if (randomValue === 0 && this.nameParts.firstNames.single) {
-            return this.nameParts.firstNames.single[Math.floor(Math.random() * this.nameParts.firstNames.single.length)]
+        if (randomValue === 0 && this.names.firstNames.single) {
+            return this.names.firstNames.single[Math.floor(Math.random() * this.names.firstNames.single.length)]
         }
 
-        return this.nameParts.firstNames.firstHalf[Math.floor(Math.random() * this.nameParts.firstNames.firstHalf.length)] +
-            this.nameParts.firstNames.secondHalf[Math.floor(Math.random() * this.nameParts.firstNames.secondHalf.length)]
+        return this.names.firstNames.firstHalf[Math.floor(Math.random() * this.names.firstNames.firstHalf.length)] +
+            this.names.firstNames.secondHalf[Math.floor(Math.random() * this.names.firstNames.secondHalf.length)]
     }
 
     generateLastName(): string {
         const randomValue = Math.floor(Math.random() * 4)
 
-        if (randomValue === 0 && this.nameParts.lastNames.single) {
-            return this.nameParts.lastNames.single[Math.floor(Math.random() * this.nameParts.lastNames.single.length)]
+        if (randomValue === 0 && this.names.lastNames.single) {
+            return this.names.lastNames.single[Math.floor(Math.random() * this.names.lastNames.single.length)]
         }
 
-        return this.nameParts.lastNames.firstHalf[Math.floor(Math.random() * this.nameParts.lastNames.firstHalf.length)] +
-            this.nameParts.lastNames.secondHalf[Math.floor(Math.random() * this.nameParts.lastNames.secondHalf.length)]
+        return this.names.lastNames.firstHalf[Math.floor(Math.random() * this.names.lastNames.firstHalf.length)] +
+            this.names.lastNames.secondHalf[Math.floor(Math.random() * this.names.lastNames.secondHalf.length)]
     }
 }
 </script>
@@ -67,7 +65,7 @@ export default class NameGenerator extends Vue {
 <style scoped>
 .name-text {
     @apply
-    text-7xl text-gray-200 hover:text-white
+    text-7xl text-gray-300 hover:text-white
     cursor-pointer
 }
 </style>

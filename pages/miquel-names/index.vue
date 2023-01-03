@@ -1,6 +1,6 @@
 <template>
     <div class="flex h-full justify-center items-center">
-        <name-generator :name-parts="nameParts"/>
+        <name-generator :names="names"/>
     </div>
 </template>
 
@@ -14,6 +14,6 @@ import { MiquelNames } from '~/core/exports/names/MiquelNames';
     components: {NameGenerator}
 })
 export default class MiquelNameIndex extends Vue {
-    nameParts: IName = MiquelNames
+    names: IName = MiquelNames
 }
 </script>
