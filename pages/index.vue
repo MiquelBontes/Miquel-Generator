@@ -16,6 +16,15 @@
                         Miquel's namen
                     </nuxt-link>
                 </div>
+
+                <div>
+                    <nuxt-link
+                        class="menu-item"
+                        to="/miquel-sentences"
+                    >
+                        Miquel's uitspraken
+                    </nuxt-link>
+                </div>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 import IName from '~/core/interfaces/Name';
 
 export const MiquelNames: IName = {
-    firstName: {
+    firstNames: {
         firstHalf: [
             'Miq',
             'Mig',
@@ -69,7 +69,7 @@ export const MiquelNames: IName = {
             'Smeagol',
         ]
     },
-    lastName: {
+    lastNames: {
         firstHalf: [
             'Bont',
             'Baan',
