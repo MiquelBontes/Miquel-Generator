@@ -16,7 +16,7 @@ import { ISentence } from '~/core/interfaces/Sentence';
 @Component
 export default class SentenceGenerator extends Vue {
     @Prop({required: true})
-    readonly sentences: ISentence
+    readonly sentences!: ISentence
 
     sentence: string = ''
 
@@ -24,9 +24,7 @@ export default class SentenceGenerator extends Vue {
         this.generateSentence()
     }
 
-    generateSentence(): string {
-        this.sentence = ''
-
+    generateSentence(): void {
         this.sentence = 'Je '
             + this.sentences.startVerbs[Math.floor(Math.random() * this.sentences.startVerbs.length)]
             + ' zo '
@@ -35,6 +33,7 @@ export default class SentenceGenerator extends Vue {
             + this.sentences.nouns[Math.floor(Math.random() * this.sentences.nouns.length)]
             + ' die je '
             + this.sentences.endVerbs[Math.floor(Math.random() * this.sentences.endVerbs.length)]
+            + '.'
     }
 }
 </script>
@@ -43,7 +42,7 @@ export default class SentenceGenerator extends Vue {
 .sentence-text {
     @apply
     mx-4
-    text-6xl text-gray-200 hover:text-white
+    text-6xl text-gray-300 hover:text-white
     cursor-pointer
 }
 </style>

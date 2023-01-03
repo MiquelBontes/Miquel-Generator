@@ -12,7 +12,6 @@ export const MiquelSentences: ISentence = {
         'kauwt',
         'spuugt',
         'zingt',
-        'schaatst',
         'vecht',
         'sport',
         'schreeuwt',
@@ -45,6 +44,7 @@ export const MiquelSentences: ISentence = {
         'zoekt',
         'kent',
         'bezit',
+        'adopteert',
     ],
     adverbs: [
         'jong',
@@ -72,6 +72,7 @@ export const MiquelSentences: ISentence = {
         'pessimistisch',
         'optimistisch',
         'zakelijk',
+        'stil',
     ],
     nouns: [
         'vis',
@@ -97,5 +98,8 @@ export const MiquelSentences: ISentence = {
         'gladde paling',
         'uil',
         'stagiair',
+        'makreel',
+        'vos',
+        ''
     ],
 }
