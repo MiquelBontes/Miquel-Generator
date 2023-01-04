@@ -20,6 +20,9 @@ export const MiquelSentences: ISentence = {
         'vliegt',
         'lijkt',
         'denkt',
+        'schaatst',
+        'korfbalt',
+        'rent',
     ],
     endVerbs: [
         'vangt',
@@ -45,6 +48,7 @@ export const MiquelSentences: ISentence = {
         'kent',
         'bezit',
         'adopteert',
+        'voert',
     ],
     adverbs: [
         'jong',
@@ -73,6 +77,8 @@ export const MiquelSentences: ISentence = {
         'optimistisch',
         'zakelijk',
         'stil',
+        'professioneel',
+        'kinderachtig',
     ],
     nouns: [
         'vis',
@@ -103,5 +109,10 @@ export const MiquelSentences: ISentence = {
         'geit',
         'developer',
         'gamer',
+        'makreel',
+        'meerkat',
+        'rat',
+        'muis',
+        'vogel',
     ],
 }

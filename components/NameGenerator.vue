@@ -12,6 +12,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import IName from '~/core/interfaces/Name';
+import INamePart from '~/core/interfaces/NamePart';
 
 @Component
 export default class NameGenerator extends Vue {
@@ -25,7 +26,7 @@ export default class NameGenerator extends Vue {
     }
 
     generateFullName(): void {
-        this.fullName = this.generateFirstName()
+        this.fullName = this.generateName(this.names.firstNames)
 
         this.fullName += ' '
 
@@ -35,29 +36,18 @@ export default class NameGenerator extends Vue {
             this.fullName += ' '
         }
 
-        this.fullName += this.generateLastName()
+        this.fullName += this.generateName(this.names.lastNames)
     }
 
-    generateFirstName(): string {
+    generateName(nameList: INamePart): string {
         const randomValue = Math.floor(Math.random() * 4)
 
-        if (randomValue === 0 && this.names.firstNames.single) {
-            return this.names.firstNames.single[Math.floor(Math.random() * this.names.firstNames.single.length)]
+        if (randomValue === 0 && nameList.single) {
+            return nameList.single[Math.floor(Math.random() * nameList.single.length)]
         }
 
-        return this.names.firstNames.firstHalf[Math.floor(Math.random() * this.names.firstNames.firstHalf.length)] +
-            this.names.firstNames.secondHalf[Math.floor(Math.random() * this.names.firstNames.secondHalf.length)]
-    }
-
-    generateLastName(): string {
-        const randomValue = Math.floor(Math.random() * 4)
-
-        if (randomValue === 0 && this.names.lastNames.single) {
-            return this.names.lastNames.single[Math.floor(Math.random() * this.names.lastNames.single.length)]
-        }
-
-        return this.names.lastNames.firstHalf[Math.floor(Math.random() * this.names.lastNames.firstHalf.length)] +
-            this.names.lastNames.secondHalf[Math.floor(Math.random() * this.names.lastNames.secondHalf.length)]
+        return nameList.firstHalf[Math.floor(Math.random() * nameList.firstHalf.length)] +
+            nameList.secondHalf[Math.floor(Math.random() * nameList.secondHalf.length)]
     }
 }
 </script>

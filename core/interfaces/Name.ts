@@ -1,11 +1,7 @@
-interface INameParts {
-    firstHalf: string[]
-    secondHalf: string[]
-    single?: string[]
-}
+import INamePart from '~/core/interfaces/NamePart';
 
 export default interface IName {
-    firstNames: INameParts
-    lastNames: INameParts
+    firstNames: INamePart
+    lastNames: INamePart
     prepositions?: string[]
 }
