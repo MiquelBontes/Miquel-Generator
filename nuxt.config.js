@@ -3,7 +3,7 @@ export default {
 	ssr: false,
 	target: 'static',
 	router: {
-		base: '/miquel-generator/'
+		base: '/Miquel-Generator/'
 	},
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
