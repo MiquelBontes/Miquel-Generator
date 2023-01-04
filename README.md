@@ -1,2 +1,2 @@
-# miquelgenerator
-De ULTIEME naam-generator!
+# Miquel-Generator
+De ULTIEME generator voor Miquel-gerelateerde dingen!
