@@ -91,7 +91,7 @@ export const MiquelSentences: ISentence = {
         'hond',
         'leeuw',
         'kamerplant',
-        'vegatariër',
+        'vegetariër',
         'dinosaurus',
         'slang',
         'koe',
